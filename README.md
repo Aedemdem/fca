@@ -1,22 +1,3 @@
-# fca
-
-Flutter Clean Architecture
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-```
-
 # Flutter Clean Architecture with SOLID + Riverpod + REST API + Cache
 
 ## Folder Structure
@@ -75,37 +56,34 @@ lib/
 
 ## Package List
 
-| Need                        | Package                     |
-|-----------------------------|-----------------------------|
-| State Management            | `flutter_riverpod`          |
-| Dependency Injection        | `get_it`                    |
-| HTTP API                    | `dio`                       |
-| Immutable Models            | `freezed`                   |
-| JSON Serialization          | `json_serializable`         |
-| Build Tools                 | `build_runner`              |
-| Local Storage (NoSQL)       | `isar`                      |
-| Cache Settings              | `shared_preferences`        |
-| Utility Helpers             | `intl`, `logger`, `equatable`, `url_launcher` |
 
-## Caching Strategy
+| Need                  | Package                                       |
+| --------------------- | --------------------------------------------- |
+| State Management      | `flutter_riverpod`                            |
+| Dependency Injection  | `get_it`                                      |
+| HTTP API              | `dio`                                         |
+| Immutable Models      | `freezed`                                     |
+| JSON Serialization    | `json_serializable`                           |
+| Build Tools           | `build_runner`                                |
+| Local Storage (NoSQL) | `isar`                                        |
+| Cache Settings        | `shared_preferences`                          |
+| Utility Helpers       | `intl`, `logger`, `equatable`, `url_launcher` |
 
-- Prefer fetching data from **local storage (Isar)** first.
-- If data is not available or expired, fetch from **remote (API)** and store it in Isar/SP.
-- Riverpod handles the state transitions (`loading`, `error`, `success`) to the UI.
 
 ## Final Check
 
-| Area                | Status |
-|---------------------|--------|
-| Clean Architecture  | ✅ Yes, complete: data → domain → presentation |
-| SOLID Principles    | ✅ Yes, all classes have single responsibility |
-| State Management    | ✅ Riverpod, integrated within feature modules |
-| Data Source Layer   | ✅ Remote and local, separated and modular |
-| Dependency Injection| ✅ Using `get_it`, centralized in `core/di` |
-| Scalability         | ✅ Easy to scale for new features |
-| Cache Ready         | ✅ Isar + SP, separated and efficient |
-| No Redundancies     | ✅ No over-engineered folders or files |
-| Modular UI          | ✅ Clear separation of page, provider, widget |
+
+| Area                 | Status                                           |
+| -------------------- | ------------------------------------------------ |
+| Clean Architecture   | ✅ Yes, complete: data → domain → presentation |
+| SOLID Principles     | ✅ Yes, all classes have single responsibility   |
+| State Management     | ✅ Riverpod, integrated within feature modules   |
+| Data Source Layer    | ✅ Remote and local, separated and modular       |
+| Dependency Injection | ✅ Using`get_it`, centralized in `core/di`       |
+| Scalability          | ✅ Easy to scale for new features                |
+| Cache Ready          | ✅ Isar + SP, separated and efficient            |
+| No Redundancies      | ✅ No over-engineered folders or files           |
+| Modular UI           | ✅ Clear separation of page, provider, widget    |
 
 ---
 
@@ -113,5 +91,6 @@ lib/
 
 By implementing this architecture, you will have a highly scalable, testable, and maintainable Flutter application that is ready for large-scale development and collaboration. The structure adheres to the Clean Architecture principles and uses modern tools like Riverpod, Dio, and Isar to ensure a robust and efficient app.
 
+```
 
 ```
